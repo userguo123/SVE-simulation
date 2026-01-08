@@ -4,8 +4,8 @@ We consider the stochastic Volterra equation
 
 $$
  X_t = X_0
-    + \int_0^t K(t - s)\,b\bigl(X_s\bigr)\,\mathrm{d}s
-    + \int_0^t K(t - s)\,\sigma\bigl(X_s\bigr)\,\mathrm{d}W_s,
+    + \int_0^t K(t - s)b\bigl(X_s\bigr)\mathrm{d}s
+    + \int_0^t K(t - s)\\sigma\bigl(X_s\bigr)\mathrm{d}W_s,
 $$
 
 where $K(u) = \frac{u^{H-\frac12}}{\Gamma\bigl(H+\tfrac12\bigr)}, \ H\in\bigl(0,\tfrac12\bigr].$ We approximate the solution of the SVE by a numerical scheme based on a discrete sampling grid. The (possibly non-equidistant) time grid is defined recursively as
