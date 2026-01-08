@@ -2,7 +2,7 @@
 clear; clc;
 
 H_list = [0.1, 0.3, 0.4];
-n_list = [5, 8,100];
+n_list = [3, 5, 8, 20, 100];
 M = 80000;     % Monte Carlo size
 
 figure; hold on;
