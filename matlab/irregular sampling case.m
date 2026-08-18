@@ -262,8 +262,8 @@ end
 
 %% Figure formatting
 
-xlabel('$n$', 'Interpreter', 'latex');
-ylabel('$\mathbb{E}[|X_1^n-X_1|]$', ...
+xlabel('$logn$', 'Interpreter', 'latex');
+ylabel('$logE[|X_1^n-X_1|]$', ...
     'Interpreter', 'latex');
 
 title('Convergence rate of the irregular Euler scheme');
