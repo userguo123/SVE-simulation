@@ -41,9 +41,9 @@ This checklist enumerates the theoretical assumptions required for the main resu
 | A8 | $\theta_t$ | strictly positive: $\theta_t > 0$ a.s. for all $t$ | ☐ | |
 | A9 | $\theta_t$ | adapted to the filtration $\{\mathcal{F}_t\}$ | ☐ | |
 | A10 | $\theta_t$ | càdlàg in $t$ a.s. | ☐ | |
-| A11 | $1/\theta_t$ | bounded: there exists $K_0 < \infty$ such that $1/\theta_t \le K_0$ a.s. for all $t \in [0,T]$ | ☐ | Used in Lemmas 4.2–4.7; can be relaxed via localization (see Remark after Theorem 1) |
+| A11 | $1/\theta_t$ | bounded: there exists $K_0 < \infty$ such that $\lvert 1/\theta_t \rvert \le K_0$ a.s. for all $t \in [0,T]$ | ☐ | Used in Lemmas 4.2–4.7; can be relaxed via localization (see Remark after Theorem 1) |
 | A12 | $1/\theta_t$ | a.s. Riemann integrable on $[0,T]$ | ☐ | Assumption in Theorem 1 |
-| A13 | $X_0$ | $\mathbb{E}[X_0^p] < \infty$ for all $p \ge 1$ | ☐ | Used in Lemma 2.2 (moment bounds) |
+| A13 | $X_0$ | $\mathbb{E}[\lvert X_0\rvert ^p] < \infty$ for all $p \ge 1$ | ☐ | Used in Lemma 2.2 (moment bounds) |
 | A14 | Sampling grid | $\tau_0^n = 0$, $\tau_{k+1}^n = \tau_k^n + 1/(n\theta(\tau_k^n))$ | ☐ | Defined in equation (3) |
 | A15 | $\eta_n(t)$ | $\eta_n(t) = \tau_k^n$ for $\tau_k^n \le t < \tau_{k+1}^n$ | ☐ | Sampling map used in the Euler scheme (Section 2) |
 
@@ -61,27 +61,4 @@ Some lemmas require stronger or additional assumptions beyond the main theorem. 
 | L4 | Lemma 4.1 (tightness of $U^n$) | All assumptions A1–A12 | See Section 4 proof |
 | L5 | Lemma 4.7 (pathwise uniqueness for the limit equation) | Lipschitz continuity of $b, \sigma$ (follows from A2, A5) | The $\theta$-term cancels in the difference argument |
 
----
 
-## Verification Status Summary
-
-| Category | Status |
-|----------|--------|
-| Coefficient assumptions (A1–A6) | ☐ All verified |
-| Hurst parameter (A7) | ☐ Verified |
-| Sampling intensity (A8–A12) | ☐ All verified |
-| Initial condition (A13) | ☐ Verified |
-| Grid definition (A14–A15) | ☐ Verified |
-
----
-
-## Instructions for Use
-
-1. For each assumption A1–A15, verify analytically or numerically that the condition holds for your specific choice of $b$, $\sigma$, $\theta$, and $H$.
-2. Mark the corresponding checkbox as ☐ Pass or ☐ Fail.
-3. If any assumption fails, the theoretical result (Theorem 1) may not apply; consider modifying the specification or using a localization argument as mentioned in the remark following Theorem 1.
-4. For the additional lemma-specific conditions, confirm that the required bounds hold in the verification of each lemma.
-
----
-
-*Last updated: August 2026*
