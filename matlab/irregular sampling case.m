@@ -363,3 +363,32 @@ disp(summary_table);
 
 % writetable(data_table, 'PanelA_log_data.csv');
 % writetable(summary_table, 'PanelA_summary.csv');
+
+%% ============================================================
+% Figure: E[|X_1^n - X_1|] versus n
+%% ============================================================
+
+figure;
+hold on;
+
+for h = 1:length(H_list)
+
+    plot(n_list, mean_error(h,:), 'o-', ...
+        'LineWidth', 1.5, ...
+        'MarkerSize', 6, ...
+        'DisplayName', ...
+        ['H = ', num2str(H_list(h))]);
+
+end
+
+xlabel('$n$', 'Interpreter', 'latex');
+ylabel('$E[|X_1^n-X_1|]$', 'Interpreter', 'latex');
+
+title('Approximation error versus discretization level');
+
+legend('Location', 'northeast');
+
+grid on;
+box on;
+
+hold off;
